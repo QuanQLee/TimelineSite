@@ -33,14 +33,14 @@ export const events: TimelineEvent[] = [
         icon: 'SparklesIcon',   // Heroicons 名称，可省
     },
     {
-        id: '唯一ID',
+        id: 'e4',
         date: 'YYYY-MM-DD',
         title: '标题',
         description: 'Markdown 文本',
         icon: 'RocketLaunchIcon',   // Heroicons 名称，可省
     },
     {
-        id: '唯一ID',
+        id: 'e5',
         date: 'YYYY-MM-DD',
         title: '标题',
         description: 'Markdown 文本',
@@ -48,7 +48,7 @@ export const events: TimelineEvent[] = [
         cover: '/assets/parallax.jpg'    // 详情页横幅，可省
     },
     {
-        id: '唯一ID',
+        id: 'e6',
         date: 'YYYY-MM-DD',
         title: '标题',
         description: 'Markdown 文本',
@@ -56,7 +56,7 @@ export const events: TimelineEvent[] = [
         cover: '/assets/pic.jpg'    // 详情页横幅，可省
     },
     {
-        id: '唯一ID',
+        id: 'e7',
         date: 'YYYY-MM-DD',
         title: '标题',
         description: 'Markdown 文本',
@@ -64,7 +64,7 @@ export const events: TimelineEvent[] = [
         cover: '/assets/pic.jpg'    // 详情页横幅，可省
     },
     {
-        id: '唯一ID',
+        id: 'e8',
         date: 'YYYY-MM-DD',
         title: '标题',
         description: 'Markdown 文本',
@@ -72,7 +72,7 @@ export const events: TimelineEvent[] = [
         cover: '/assets/pic.jpg'    // 详情页横幅，可省
     },
     {
-        id: '唯一ID',
+        id: 'e9',
         date: 'YYYY-MM-DD',
         title: '标题',
         description: 'Markdown 文本',
@@ -80,7 +80,7 @@ export const events: TimelineEvent[] = [
         cover: '/assets/pic.jpg'    // 详情页横幅，可省
     },
     {
-        id: '唯一ID',
+        id: 'e10',
         date: 'YYYY-MM-DD',
         title: '标题',
         description: 'Markdown 文本',
@@ -88,7 +88,7 @@ export const events: TimelineEvent[] = [
         cover: '/assets/pic.jpg'    // 详情页横幅，可省
     },
     {
-        id: '唯一ID',
+        id: 'e11',
         date: 'YYYY-MM-DD',
         title: '标题',
         description: 'Markdown 文本',
@@ -96,7 +96,7 @@ export const events: TimelineEvent[] = [
         cover: '/assets/pic.jpg'    // 详情页横幅，可省
     },
     {
-        id: '唯一ID',
+        id: 'e12',
         date: 'YYYY-MM-DD',
         title: '标题',
         description: 'Markdown 文本',
