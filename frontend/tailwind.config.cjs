@@ -1,7 +1,7 @@
 /** @type {import('tailwindcss').Config} */
-export default {
+module.exports = {
     content: ['./index.html', './src/**/*.{ts,tsx}'],
-    darkMode: 'class',                // 手动切换深色
+    darkMode: 'class',                // 脢脰露炉脟脨禄禄脡卯脡芦
     theme: {
         extend: {
             colors: {

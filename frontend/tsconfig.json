@@ -7,7 +7,7 @@
     "strict": false,
     "skipLibCheck": true,
     "esModuleInterop": true,
-    "types": [ "vite/client" ]
+    "types": [ "vite/client", "react" ]
   },
   "include": [ "src" ]
 }
