@@ -27,6 +27,9 @@ global.json
 # VS Code workspace
 .vscode/
 
-# Others (视项目而定)
+node_modules/
+frontend/dist/
+frontend/tsconfig.tsbuildinfo
+frontend/src/**/*.js
 # node_modules/
 # wwwroot/lib/

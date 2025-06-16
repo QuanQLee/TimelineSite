@@ -13,6 +13,7 @@ import {
     SparklesIcon,
 } from '@heroicons/react/24/solid';
 import { useNavigate } from 'react-router-dom';
+import { useState, type JSX } from 'react';
 import Markdown from './Markdown';
 import ParallaxBanner from './ParallaxBanner';
 
@@ -24,18 +25,27 @@ const icons: Record<string, JSX.Element> = {
 
 export default function TimelinePage() {
     const navigate = useNavigate();
+    const [searchTerm, setSearchTerm] = useState('');
 
     return (
         <section className="parallax-wrapper min-h-screen bg-slate-50 dark:bg-slate-900 py-12 px-4">
             {events[0].cover && <ParallaxBanner src={events[0].cover} />}
 
             <motion.h1
-                className="text-4xl font-bold mb-12 text-slate-800 dark:text-slate-100"
+                className="text-4xl font-bold mb-6 text-slate-800 dark:text-slate-100"
                 initial={{ opacity: 0, y: -30 }}
                 animate={{ opacity: 1, y: 0 }}
             >
                 项目大事记
             </motion.h1>
+
+            <input
+                type="text"
+                placeholder="搜索事件..."
+                value={searchTerm}
+                onChange={e => setSearchTerm(e.target.value)}
+                className="mb-12 block w-full max-w-xs p-2 border border-slate-300 rounded"
+            />
 
             <VerticalTimeline
                 animate
@@ -43,6 +53,10 @@ export default function TimelinePage() {
                 className="timeline relative snap-y snap-mandatory"
             >
                 {events
+                    .filter(e =>
+                        e.title.includes(searchTerm) ||
+                        e.description.includes(searchTerm)
+                    )
                     .sort((a, b) => Date.parse(a.date) - Date.parse(b.date))
                     .map((e, idx) => (
                         <VerticalTimelineElement
