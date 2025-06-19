@@ -30,22 +30,22 @@ export default function Home() {
                     <Icon key={idx} className="w-8 h-8 opacity-80" />
                 ))}
             </div>
+            <Link
+                to="/timeline"
+                className="mt-2 px-6 py-3 bg-primary-dark/80 rounded-full font-semibold shadow-lg hover:scale-105 transition-transform"
+            >
+                查看简介
+            </Link>
             {resumeAvailable && (
                 <a
                     href="/resume.pdf"
                     download
-                    className="mt-2 px-6 py-3 bg-white text-primary rounded-full font-semibold shadow-lg flex items-center gap-2"
+                    className="px-6 py-3 bg-white text-primary rounded-full font-semibold shadow-lg flex items-center gap-2"
                 >
                     <DocumentArrowDownIcon className="w-5 h-5" />
                     下载简历
                 </a>
             )}
-            <Link
-                to="/timeline"
-                className="px-6 py-3 bg-primary-dark/80 rounded-full font-semibold shadow-lg hover:scale-105 transition-transform"
-            >
-                查看简介
-            </Link>
             <p className="absolute bottom-4 text-sm opacity-90">
                 邮箱：you@example.com ｜ 电话：123-456-7890
             </p>
