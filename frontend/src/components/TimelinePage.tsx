@@ -15,7 +15,7 @@ import {
 import { useNavigate } from 'react-router-dom';
 import { useState, type JSX } from 'react';
 import Markdown from './Markdown';
-import ParallaxBanner from './ParallaxBanner';
+import HeroBanner from './HeroBanner';
 
 const icons: Record<string, JSX.Element> = {
     FlagIcon: <FlagIcon className="w-6 h-6" />,
@@ -29,7 +29,7 @@ export default function TimelinePage() {
 
     return (
         <section className="parallax-wrapper min-h-screen bg-slate-50 dark:bg-slate-900 py-12 px-4">
-            {events[0].cover && <ParallaxBanner src={events[0].cover} />}
+            {events[0].cover && <HeroBanner src={events[0].cover} />}
 
             <motion.h1
                 className="text-4xl font-bold mb-6 text-slate-800 dark:text-slate-100"
