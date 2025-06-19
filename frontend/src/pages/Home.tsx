@@ -32,7 +32,7 @@ export default function Home() {
             </div>
             <Link
                 to="/timeline"
-                className="mt-2 px-6 py-3 bg-primary-dark/80 rounded-full font-semibold shadow-lg hover:scale-105 transition-transform"
+                className="mt-2 px-7 py-3 bg-gradient-to-r from-primary to-primary-dark text-white rounded-full font-semibold shadow-lg ring-2 ring-white hover:scale-110 hover:ring-primary-dark transition-transform"
             >
                 查看简介
             </Link>
