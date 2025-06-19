@@ -10,9 +10,10 @@ import {
 
 interface Props {
     src: string;
+    overlayClassName?: string;
 }
 
-export default function HeroBanner({ src }: Props) {
+export default function HeroBanner({ src, overlayClassName }: Props) {
     const [resumeAvailable, setResumeAvailable] = useState(false);
     const techIcons = [CodeBracketIcon, CpuChipIcon, ServerStackIcon, BeakerIcon];
 
@@ -25,7 +26,11 @@ export default function HeroBanner({ src }: Props) {
     return (
         <div className="relative">
             <ParallaxBanner src={src} className="h-64 md:h-96" />
-            <div className="absolute inset-0 bg-gradient-to-br from-primary to-primary-dark opacity-80" />
+            <div
+                className={`absolute inset-0 ${
+                    overlayClassName || 'bg-gradient-to-br from-primary to-primary-dark opacity-80'
+                }`}
+            />
             <div className="absolute inset-0 flex flex-col items-center justify-center gap-4 text-white">
                 <h1 className="text-5xl font-extrabold">个人主页</h1>
                 <div className="flex flex-wrap justify-center gap-4 opacity-70">

@@ -52,3 +52,6 @@ export default tseslint.config({
   },
 })
 ```
+
+## Custom images
+Place your banner and profile images under `public/images/` inside the `frontend` directory. Use the same file names referenced in the code (e.g., `banner.jpg`, `profile.jpg`).
