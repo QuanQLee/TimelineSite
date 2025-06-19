@@ -6,6 +6,7 @@
     icon?: string;        // Heroicons 名称
     cover?: string;  // <—— 关键！（图片 url 可选）当作大背景，比如页面顶部的横幅大图、或者是视觉背景
     image?: string;    // 事件卡片的小配图
+    images?: string[]; // 详情页多图轮播
 }
 
 export const events: TimelineEvent[] = [
@@ -17,6 +18,11 @@ export const events: TimelineEvent[] = [
         icon: 'FlagIcon',
         cover: '/images/my-background.png', // 只要加上 image 字段就行
         image: '/images/my-project.png', // 只要加上 image 字段就行
+        images: [
+            '/images/my-project1.png',
+            '/images/my-project2.png',
+            '/images/my-project3.png',
+        ],
     },
     {
         id: 'e2',

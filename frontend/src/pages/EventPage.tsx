@@ -2,6 +2,7 @@ import { useParams, Link } from 'react-router-dom';
 import { events } from '../data/events';
 import Markdown from '../components/Markdown';
 import ParallaxBanner from '../components/ParallaxBanner';
+import ImageCarousel from '../components/ImageCarousel';
 
 export default function EventPage() {
     const { id } = useParams();
@@ -13,6 +14,7 @@ export default function EventPage() {
             <div className="relative max-w-2xl mx-auto pt-48 pb-20 px-4">
                 <h1 className="text-3xl font-bold mb-6 text-slate-800 dark:text-slate-100">{evt.title}</h1>
                 <p className="mb-8 text-slate-500 dark:text-slate-400">{evt.date}</p>
+                {evt.images && <ImageCarousel images={evt.images} />}
                 <Markdown>{evt.description}</Markdown>
                 <Link to="/timeline" className="block mt-12 text-primary underline">← 返回时间轴</Link>
             </div>
