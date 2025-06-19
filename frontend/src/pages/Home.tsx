@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import {
     DocumentArrowDownIcon,
@@ -8,7 +9,14 @@ import {
 } from '@heroicons/react/24/solid';
 
 export default function Home() {
+    const [resumeAvailable, setResumeAvailable] = useState(false);
     const techIcons = [CodeBracketIcon, CpuChipIcon, ServerStackIcon, BeakerIcon];
+
+    useEffect(() => {
+        fetch('/resume.pdf', { method: 'HEAD' })
+            .then((res) => setResumeAvailable(res.ok))
+            .catch(() => setResumeAvailable(false));
+    }, []);
     return (
         <div className="relative min-h-screen flex flex-col items-center justify-center gap-6 bg-gradient-to-br from-primary to-primary-dark text-white overflow-hidden">
             <img
@@ -22,14 +30,16 @@ export default function Home() {
                     <Icon key={idx} className="w-8 h-8 opacity-80" />
                 ))}
             </div>
-            <a
-                href="/resume.pdf"
-                download
-                className="mt-2 px-6 py-3 bg-white text-primary rounded-full font-semibold shadow-lg flex items-center gap-2"
-            >
-                <DocumentArrowDownIcon className="w-5 h-5" />
-                下载简历
-            </a>
+            {resumeAvailable && (
+                <a
+                    href="/resume.pdf"
+                    download
+                    className="mt-2 px-6 py-3 bg-white text-primary rounded-full font-semibold shadow-lg flex items-center gap-2"
+                >
+                    <DocumentArrowDownIcon className="w-5 h-5" />
+                    下载简历
+                </a>
+            )}
             <Link
                 to="/timeline"
                 className="px-6 py-3 bg-primary-dark/80 rounded-full font-semibold shadow-lg hover:scale-105 transition-transform"
