@@ -11,7 +11,7 @@ interface ParallaxBannerProps {
 export default function ParallaxBanner({ src, className }: ParallaxBannerProps) {
     return (
         <div
-            className={`w-full h-64 md:h-96 object-cover bg-center bg-cover rounded-xl mb-10 shadow ${className || ''}`}
+            className={`w-full object-cover bg-center bg-cover rounded-xl mb-10 shadow ${className || ''}`}
             style={{
                 backgroundImage: `url(${src})`,
                 backgroundAttachment: 'fixed',
