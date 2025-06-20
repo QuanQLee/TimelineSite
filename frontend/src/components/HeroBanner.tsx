@@ -6,6 +6,11 @@ import {
     DevicePhoneMobileIcon,
     ServerIcon,
     CloudIcon,
+    CodeBracketSquareIcon,
+    PaintBrushIcon,
+    FilmIcon,
+    WrenchScrewdriverIcon,
+    CommandLineIcon,
 } from '@heroicons/react/24/solid';
 
 interface Props {
@@ -20,6 +25,11 @@ export default function HeroBanner({ src, overlayClassName }: Props) {
         { Icon: DevicePhoneMobileIcon, label: '移动应用' },
         { Icon: ServerIcon, label: '后端服务' },
         { Icon: CloudIcon, label: '云部署' },
+        { Icon: CodeBracketSquareIcon, label: 'React/Vue 组件化开发' },
+        { Icon: PaintBrushIcon, label: 'UI 图标设计' },
+        { Icon: FilmIcon, label: '视频剪辑与动效' },
+        { Icon: WrenchScrewdriverIcon, label: '工具链 Git · Docker · CI/CD' },
+        { Icon: CommandLineIcon, label: 'Python 数据脚本' },
     ];
 
     useEffect(() => {
