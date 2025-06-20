@@ -64,13 +64,10 @@ export const events: TimelineEvent[] = [
         title: '第一个个人网站',
         description: '最小可运行版本个人网站，有最基础的功能',
         icon: 'CommandLineIcon',   // Heroicons 名称，可省
-        cover: '/assets/parallax.jpg',    // 详情页横幅，可省
+        cover: '/images/profile-banner3.jpg',    // 详情页横幅，可省
         image: '/images/fi-web-project.png', // 只要加上 image 字段就行
         images: [
             '/images/fi-web-project1.png',
-            '/images/fi-web-project2.png',
-            '/images/fi-web-project3.png',
-            '/images/fi-web-project4.png',
         ],
     },
     {
@@ -79,7 +76,7 @@ export const events: TimelineEvent[] = [
         title: '项目',
         description: '各种小项目、不值一提，以后再放上来',
         icon: 'PuzzlePieceIcon',   // Heroicons 名称，可省
-        cover: '/assets/pic.jpg'    // 详情页横幅，可省
+        cover: '/images/profile-banner3.jpg'    // 详情页横幅，可省
     },
 ];
 
