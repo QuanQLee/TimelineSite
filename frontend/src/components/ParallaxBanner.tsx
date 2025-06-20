@@ -6,12 +6,15 @@ import React from 'react';
 interface ParallaxBannerProps {
     src: string;             // 背景图片地址
     className?: string;      // 可选：自定义 class
+    fit?: 'cover' | 'contain'; // 背景适应方式
 }
 
-export default function ParallaxBanner({ src, className }: ParallaxBannerProps) {
+export default function ParallaxBanner({ src, className, fit = 'cover' }: ParallaxBannerProps) {
     return (
         <div
-            className={`w-full object-cover bg-center bg-cover rounded-xl mb-10 shadow ${className || ''}`}
+            className={`w-full bg-center rounded-xl mb-10 shadow ${
+                fit === 'contain' ? 'bg-contain' : 'bg-cover'
+            } ${className || ''}`}
             style={{
                 backgroundImage: `url(${src})`,
                 backgroundAttachment: 'fixed',
