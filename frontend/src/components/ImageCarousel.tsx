@@ -1,12 +1,23 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/24/solid';
 
 interface Props {
     images: string[];
+    interval?: number;
+    autoPlay?: boolean;
 }
 
-export default function ImageCarousel({ images }: Props) {
+export default function ImageCarousel({ images, interval = 3000, autoPlay = true }: Props) {
     const [idx, setIdx] = useState(0);
+
+    useEffect(() => {
+        if (!autoPlay || !images || images.length <= 1) return;
+        const timer = setInterval(() => {
+            setIdx(i => (i + 1) % images.length);
+        }, interval);
+        return () => clearInterval(timer);
+    }, [autoPlay, images, interval]);
+
     if (!images || images.length === 0) return null;
 
     const prev = () => setIdx((idx + images.length - 1) % images.length);
