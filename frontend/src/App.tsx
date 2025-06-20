@@ -12,7 +12,7 @@ export default function App() {
     const [dark, setDark] = useState(false);
 
     return (
-        <BrowserRouter>
+        <BrowserRouter basename="/TimelineSite">
             <div className={dark ? 'dark' : ''}>
                 {/* 亮／暗主题按钮 */}
                 <button
