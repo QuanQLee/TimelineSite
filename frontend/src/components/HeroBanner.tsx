@@ -47,7 +47,7 @@ export default function HeroBanner({ src, overlayClassName }: Props) {
                 }`}
             />
             <div className="absolute inset-0 flex flex-col items-center justify-center gap-4 text-white">
-                <h1 className="text-5xl font-extrabold">个人主页</h1>
+                <h1 className="text-5xl font-extrabold">项目 技能</h1>
                 <div className="flex flex-wrap justify-center gap-6 opacity-100">
                     {techIcons.map(({ Icon, label }, idx) => (
                         <div key={idx} className="flex flex-col items-center">
