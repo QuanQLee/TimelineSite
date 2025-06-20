@@ -12,7 +12,7 @@ interface ParallaxBannerProps {
 export default function ParallaxBanner({ src, className, fit = 'cover' }: ParallaxBannerProps) {
     return (
         <div
-            className={`w-full bg-center rounded-xl mb-10 shadow ${
+            className={`w-full bg-center bg-no-repeat rounded-xl mb-10 shadow ${
                 fit === 'contain' ? 'bg-contain' : 'bg-cover'
             } ${className || ''}`}
             style={{

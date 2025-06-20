@@ -4,7 +4,12 @@ import ParallaxBanner from '../components/ParallaxBanner';
 export default function Home() {
     return (
         <div className="relative min-h-screen overflow-hidden text-white">
-            <ParallaxBanner src="/images/profile-banner.jpg" className="h-screen" fit="contain" />
+            {/* Use cover to ensure background doesn't repeat on larger screens */}
+            <ParallaxBanner
+                src="/images/profile-banner.jpg"
+                className="h-screen mb-0"
+                fit="cover"
+            />
             <div className="absolute inset-0 bg-primary-dark/40" />
             <div className="absolute inset-0 flex flex-col items-center justify-center gap-6">
                 <h1 className="text-5xl font-extrabold">个人主页</h1>
