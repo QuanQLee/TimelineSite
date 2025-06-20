@@ -32,7 +32,7 @@ export default function TimelinePage() {
             {events[0].cover && (
                 <HeroBanner
                     src={events[0].cover}
-                    overlayClassName="bg-purple-600/70"
+                    overlayClassName="bg-purple-600/40"
                 />
             )}
 
@@ -41,7 +41,7 @@ export default function TimelinePage() {
                 initial={{ opacity: 0, y: -30 }}
                 animate={{ opacity: 1, y: 0 }}
             >
-                项目大事记
+                项目时间线
             </motion.h1>
 
             <input

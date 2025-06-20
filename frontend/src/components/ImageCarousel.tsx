@@ -6,7 +6,7 @@ interface Props {
     interval?: number;
 }
 
-export default function ImageCarousel({ images, interval = 3000 }: Props) {
+export default function ImageCarousel({ images, interval = 1500 }: Props) {
     const [idx, setIdx] = useState(0);
 
     useEffect(() => {

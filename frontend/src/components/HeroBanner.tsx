@@ -48,7 +48,7 @@ export default function HeroBanner({ src, overlayClassName }: Props) {
                         下载简历
                     </a>
                 )}
-                <p className="text-sm opacity-90">邮箱：you@example.com ｜ 电话：123-456-7890</p>
+                <p className="text-sm opacity-90">邮箱：309919702@qq.com ｜ 微信：The_5656</p>
             </div>
         </div>
     );
