@@ -8,9 +8,12 @@ import 'react-vertical-timeline-component/style.min.css';
 import { events } from '../data/events';
 import { motion } from 'framer-motion';
 import {
-    FlagIcon,
-    RocketLaunchIcon,
-    SparklesIcon,
+    ShoppingCartIcon,
+    BugAntIcon,
+    GlobeAltIcon,
+    DocumentTextIcon,
+    CommandLineIcon,
+    PuzzlePieceIcon,
 } from '@heroicons/react/24/solid';
 import { useNavigate } from 'react-router-dom';
 import { useState, type JSX } from 'react';
@@ -18,9 +21,12 @@ import Markdown from './Markdown';
 import HeroBanner from './HeroBanner';
 
 const icons: Record<string, JSX.Element> = {
-    FlagIcon: <FlagIcon className="w-6 h-6" />,
-    RocketLaunchIcon: <RocketLaunchIcon className="w-6 h-6" />,
-    SparklesIcon: <SparklesIcon className="w-6 h-6" />,
+    ShoppingCartIcon: <ShoppingCartIcon className="w-6 h-6" />,
+    BugAntIcon: <BugAntIcon className="w-6 h-6" />,
+    GlobeAltIcon: <GlobeAltIcon className="w-6 h-6" />,
+    DocumentTextIcon: <DocumentTextIcon className="w-6 h-6" />,
+    CommandLineIcon: <CommandLineIcon className="w-6 h-6" />,
+    PuzzlePieceIcon: <PuzzlePieceIcon className="w-6 h-6" />,
 };
 
 export default function TimelinePage() {
@@ -76,7 +82,7 @@ export default function TimelinePage() {
                             }}
                             contentArrowStyle={{ borderRight: '7px solid #0ea5e9' }}
                             iconStyle={{ background: '#0ea5e9', color: '#fff' }}
-                            icon={icons[e.icon ?? 'FlagIcon']}
+                            icon={icons[e.icon ?? 'ShoppingCartIcon']}
                             className="snap-start group"
                         >
                             <motion.div
