@@ -32,11 +32,12 @@ export default function HeroBanner({ src, overlayClassName }: Props) {
         { Icon: CommandLineIcon, label: 'Python 数据脚本' },
     ];
 
+    const resumeUrl = `${import.meta.env.BASE_URL}resume.pdf`;
     useEffect(() => {
-        fetch('/resume.pdf', { method: 'HEAD' })
+        fetch(resumeUrl, { method: 'HEAD' })
             .then(res => setResumeAvailable(res.ok))
             .catch(() => setResumeAvailable(false));
-    }, []);
+    }, [resumeUrl]);
 
     return (
         <div className="relative">
@@ -58,7 +59,7 @@ export default function HeroBanner({ src, overlayClassName }: Props) {
                 </div>
                 {resumeAvailable && (
                     <a
-                        href="/resume.pdf"
+                        href={resumeUrl}
                         download
                         className="px-6 py-3 bg-white text-primary rounded-full font-semibold shadow-lg flex items-center gap-2"
                     >
