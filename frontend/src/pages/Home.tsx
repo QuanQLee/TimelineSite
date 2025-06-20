@@ -6,7 +6,7 @@ export default function Home() {
         <div className="relative min-h-screen overflow-hidden text-white">
             {/* Use cover to ensure background doesn't repeat on larger screens */}
             <ParallaxBanner
-                src="/images/profile-banner.jpg"
+                src={`${import.meta.env.BASE_URL}images/profile-banner.jpg`}
                 className="h-screen mb-0"
                 fit="cover"
             />

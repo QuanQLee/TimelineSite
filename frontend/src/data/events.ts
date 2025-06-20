@@ -8,6 +8,7 @@
     image?: string;    // 事件卡片的小配图
     images?: string[]; // 详情页多图轮播
 }
+const toUrl = (p: string) => `${import.meta.env.BASE_URL}${p.replace(/^\/+/, '')}`;
 
 export const events: TimelineEvent[] = [
     {
@@ -16,12 +17,12 @@ export const events: TimelineEvent[] = [
         title: 'MVP电商系统',
         description: '最小可使用的一个**微服务**和Web前端的电商系统。',
         icon: 'ShoppingCartIcon',
-        cover: '/images/my-background.jpg', // 只要加上 image 字段就行
-        image: '/images/my-project.png', // 只要加上 image 字段就行
+        cover: toUrl('/images/my-background.jpg'), // 只要加上 image 字段就行
+        image: toUrl('/images/my-project.png'), // 只要加上 image 字段就行
         images: [
-            '/images/my-project1.png',
-            '/images/my-project2.png',
-            '/images/my-project3.png',
+            toUrl('/images/my-project1.png'),
+            toUrl('/images/my-project2.png'),
+            toUrl('/images/my-project3.png'),
         ],
     },
     {
@@ -30,11 +31,11 @@ export const events: TimelineEvent[] = [
         title: '爬虫 1.0 发布',
         description: '上线第一个版本的核心功能：\n\n- 基础可使用\n- 爬取学习文本\n- 爬取视频学习\n- 遵守爬虫规则和风险',
         icon: 'BugAntIcon',
-        image: '/images/pachong-project.png', // 只要加上 image 字段就行
+        image: toUrl('/images/pachong-project.png'), // 只要加上 image 字段就行
         images: [
-            '/images/pachong-project1.png',
-            '/images/pachong-project2.png',
-            '/images/pachong-project3.png',
+            toUrl('/images/pachong-project1.png'),
+            toUrl('/images/pachong-project2.png'),
+            toUrl('/images/pachong-project3.png'),
         ],
     },
     {
@@ -50,12 +51,12 @@ export const events: TimelineEvent[] = [
         title: '个人文章项目网站',
         description: 'URL:https://github.com/QuanQLee/Pe-Website.git \n\n- 带后端的个人发布文章的网站\n- 有主页\n- 文章端\n- 项目端\n- 可发送给我邮件端\n- 带管理后台',
         icon: 'DocumentTextIcon',   // Heroicons 名称，可省
-        image: '/images/pe-web-project.png', // 只要加上 image 字段就行
+        image: toUrl('/images/pe-web-project.png'), // 只要加上 image 字段就行
         images: [
-            '/images/pe-web-project1.png',
-            '/images/pe-web-project2.png',
-            '/images/pe-web-project3.png',
-            '/images/pe-web-project4.png',
+            toUrl('/images/pe-web-project1.png'),
+            toUrl('/images/pe-web-project2.png'),
+            toUrl('/images/pe-web-project3.png'),
+            toUrl('/images/pe-web-project4.png'),
         ],
     },
     {
@@ -64,10 +65,10 @@ export const events: TimelineEvent[] = [
         title: '第一个个人网站',
         description: '最小可运行版本个人网站，有最基础的功能',
         icon: 'CommandLineIcon',   // Heroicons 名称，可省
-        cover: '/images/profile-banner3.jpg',    // 详情页横幅，可省
-        image: '/images/fi-web-project.png', // 只要加上 image 字段就行
+        cover: toUrl('/images/profile-banner3.jpg'),    // 详情页横幅，可省
+        image: toUrl('/images/fi-web-project.png'), // 只要加上 image 字段就行
         images: [
-            '/images/fi-web-project1.png',
+            toUrl('/images/fi-web-project1.png'),
         ],
     },
     {
@@ -76,7 +77,7 @@ export const events: TimelineEvent[] = [
         title: '项目',
         description: '各种小项目、不值一提，以后再放上来',
         icon: 'PuzzlePieceIcon',   // Heroicons 名称，可省
-        cover: '/images/profile-banner3.jpg'    // 详情页横幅，可省
+        cover: toUrl('/images/profile-banner3.jpg')    // 详情页横幅，可省
     },
 ];
 
