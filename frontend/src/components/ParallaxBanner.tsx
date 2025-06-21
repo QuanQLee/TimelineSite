@@ -33,11 +33,14 @@ export default function ParallaxBanner({ src, className, fit = 'cover', disableF
 
     const attachment = disableFixed || isCoarse ? 'scroll' : 'fixed';
 
+    const fitClass =
+        fit === 'contain' ? 'bg-contain' : 'bg-contain sm:bg-cover';
+
     return (
         <div
-            className={`w-full bg-center bg-no-repeat rounded-xl mb-10 shadow ${
-                fit === 'contain' ? 'bg-contain' : 'bg-cover'
-            } ${className || ''}`}
+            className={`w-full bg-center bg-no-repeat rounded-xl mb-10 shadow ${fitClass} ${
+                className || ''
+            }`}
             style={{
                 backgroundImage: `url(${src})`,
                 backgroundAttachment: attachment,
