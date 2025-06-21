@@ -55,7 +55,7 @@ export default function TimelinePage() {
                 placeholder="搜索事件..."
                 value={searchTerm}
                 onChange={e => setSearchTerm(e.target.value)}
-                className="mb-12 block w-full max-w-xs p-2 border border-slate-300 rounded"
+                className="mb-12 block w-full sm:max-w-xs p-2 border border-slate-300 rounded"
             />
 
             <VerticalTimeline
@@ -106,7 +106,7 @@ export default function TimelinePage() {
                                     <img
                                         src={e.image}
                                         alt={e.title}
-                                        className="mt-3 mb-2 max-w-xs max-h-40 rounded-lg shadow hover:scale-105 transition"
+                                        className="mt-3 mb-2 w-full sm:max-w-xs sm:max-h-60 rounded-lg shadow hover:scale-105 transition"
                                         style={{ objectFit: 'cover' }}
                                     />
                                 )}
