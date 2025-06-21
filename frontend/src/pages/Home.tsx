@@ -3,7 +3,7 @@ import ParallaxBanner from '../components/ParallaxBanner';
 
 export default function Home() {
     return (
-        <div className="relative min-h-screen overflow-hidden text-white">
+        <div className="relative min-h-screen overflow-x-hidden text-white">
             {/* Use cover to ensure background doesn't repeat on larger screens */}
             <ParallaxBanner
                 src={`${import.meta.env.BASE_URL}images/profile-banner.jpg`}
