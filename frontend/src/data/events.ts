@@ -49,7 +49,7 @@ export const events: TimelineEvent[] = [
         id: 'e4',
         date: '2025-05-18——2025-05-25',
         title: '个人文章项目网站',
-        description: 'URL:https://github.com/QuanQLee/Pe-Website.git \n\n- 带后端的个人发布文章的网站\n- 有主页\n- 文章端\n- 项目端\n- 可发送给我邮件端\n- 带管理后台',
+        description: 'URL:https://quanqlee.github.io/Pe-Website/ \n\n- 带后端的个人发布文章的网站\n- 有主页\n- 文章端\n- 项目端\n- 可发送给我邮件端\n- 带管理后台',
         icon: 'DocumentTextIcon',   // Heroicons 名称，可省
         image: toUrl('/images/pe-web-project.png'), // 只要加上 image 字段就行
         images: [
