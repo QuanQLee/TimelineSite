@@ -16,7 +16,7 @@ import {
     PuzzlePieceIcon,
 } from '@heroicons/react/24/solid';
 import { useNavigate } from 'react-router-dom';
-import { useState, type JSX } from 'react';
+import { useState, useEffect, type JSX } from 'react';
 import Markdown from './Markdown';
 import HeroBanner from './HeroBanner';
 
@@ -32,6 +32,16 @@ const icons: Record<string, JSX.Element> = {
 export default function TimelinePage() {
     const navigate = useNavigate();
     const [searchTerm, setSearchTerm] = useState('');
+    const [layout, setLayout] = useState<'1-column' | '2-columns'>('2-columns');
+
+    useEffect(() => {
+        const updateLayout = () => {
+            setLayout(window.innerWidth < 768 ? '1-column' : '2-columns');
+        };
+        updateLayout();
+        window.addEventListener('resize', updateLayout);
+        return () => window.removeEventListener('resize', updateLayout);
+    }, []);
 
     return (
         <section className="parallax-wrapper min-h-screen bg-slate-50 dark:bg-slate-900 py-12 px-4">
@@ -62,6 +72,7 @@ export default function TimelinePage() {
                 animate
                 lineColor="#0ea5e9"
                 className="timeline relative snap-y snap-mandatory"
+                layout={layout}
             >
                 {events
                     .filter(e =>
