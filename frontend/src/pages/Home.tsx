@@ -11,8 +11,8 @@ export default function Home() {
                 fit="cover"
             />
             <div className="absolute inset-0 bg-primary-dark/40" />
-            <div className="absolute inset-0 flex flex-col items-center justify-center gap-6">
-                <h1 className="text-5xl font-extrabold">个人主页</h1>
+            <div className="absolute inset-0 flex flex-col items-center justify-center gap-6 px-4 text-center">
+                <h1 className="text-4xl md:text-5xl font-extrabold">个人主页</h1>
                 <Link
                     to="/timeline"
                     className="px-6 py-3 bg-primary-dark/80 rounded-full font-semibold shadow-lg hover:scale-105 transition-transform"

@@ -47,12 +47,12 @@ export default function HeroBanner({ src, overlayClassName }: Props) {
                     overlayClassName || 'bg-gradient-to-br from-primary to-primary-dark opacity-80'
                 }`}
             />
-            <div className="absolute inset-0 flex flex-col items-center justify-center gap-4 text-white">
-                <h1 className="text-5xl font-extrabold">项目 技能</h1>
+            <div className="absolute inset-0 flex flex-col items-center justify-center gap-4 text-white px-4">
+                <h1 className="text-3xl md:text-5xl font-extrabold">项目 技能</h1>
                 <div className="flex flex-wrap justify-center gap-6 opacity-100">
                     {techIcons.map(({ Icon, label }, idx) => (
                         <div key={idx} className="flex flex-col items-center">
-                            <Icon className="w-8 h-8" />
+                            <Icon className="w-6 h-6 md:w-8 md:h-8" />
                             <span className="text-xs mt-1">{label}</span>
                         </div>
                     ))}
